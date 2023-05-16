@@ -1,5 +1,5 @@
 <?php
-include __DIR__. '/Genre.php';
+
 class Movie
 {
     public int $id;
@@ -24,6 +24,10 @@ class Movie
         $this->rating = $rating;
     }
 
+    public function getTitle() {
+        return "<h3>$this->title</h3>";
+    }
+    
     public function getCoverImage() {
         return "<img class='img-fluid' src='$this->cover_image' alt='$this->title'>";
     }

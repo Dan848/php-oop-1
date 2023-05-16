@@ -21,16 +21,23 @@ include __DIR__.'/db.php';
             <div class="row justify-content-center">
                 <?php foreach ($movies as $movie) {?>
                 <div class="col-12 col-md-6 col-lg-4 g-3">
-                    <div class="card bg-dark border-0">
+                    <!-- CARD -->
+                    <div class="card bg-warning text-black border-0">
+                        <!-- IMAGE -->
                         <div>
                             <?php echo $movie->getCoverImage()?>
                         </div>
-                        <h3><?php echo $movie->title?></h3>
-                        <div><?php echo $movie->getRelaseYear()?></div>
-                        <div><?php echo $movie->getDirector()?></div>
-                        <div><?php echo $movie->getRating()?></div>
-                        <div><?php echo $movie->genre->getGenres()?></div>
-                        <div><?php echo $movie->genre->getAdultsOnly()?></div>                        
+                        <!-- TITLE -->
+                        <div class="px-2 pb-2 fw-medium">
+                        <?php echo $movie->getTitle()?>
+                        <!-- INFO -->
+                        <?php echo $movie->getRelaseYear()?>
+                        <?php echo $movie->getDirector()?>
+                        <?php echo $movie->getRating()?>
+                        <?php echo $movie->genre->getGenres()?>
+                        <?php echo $movie->genre->getAdultsOnly()?>
+                        </div>
+
                     </div>
                 </div>
                 <?php }?>
