@@ -1,5 +1,5 @@
 <?php
-include __DIR__ . '/Models/Movies.php';
+include __DIR__ . '/Models/Movie.php';
 
 $movies = [
     new Movie(
@@ -23,7 +23,7 @@ $movies = [
     new Movie(
         "3",
         "Lupin III - Il castello di Cagliostro",
-        "https://upload.wikimedia.org/wikipedia/it/1/1b/Logo_del_Castello_di_Cagliostro.png",
+        "https://upload.wikimedia.org/wikipedia/it/1/1b/Logo_del_Castello_di_Cagliostro.PNG",
         1979,
         new Genre(["drammatico", "poliziesco", "thriller", "noir"], false),
         "Hayao Miyazaki",

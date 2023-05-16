@@ -23,4 +23,8 @@ class Movie
         $this->director = $director;
         $this->rating = $rating;
     }
+
+    public function getCoverImage() {
+        return "<img class='img-fluid' src='$this->cover_image' alt='$this->title'>";
+    }
 }

@@ -1,3 +1,7 @@
+<?php 
+include __DIR__.'/db.php'
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,11 +17,18 @@
         <h1 class="mt-2">PHP Movie Class</h1>
     </header>
     <main>
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    
+        <div class="container mt-5">
+            <div class="row justify-content-center">
+                <?php foreach ($movies as $movie) {?>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card bg-dark border-0">
+                        <div>
+                            <?php echo $movie->getCoverImage()?>
+                        </div>
+                        <h3><?php echo $movie->title?></h3>
+                    </div>
                 </div>
+                <?php }?>
             </div>
         </div>
     </main>
