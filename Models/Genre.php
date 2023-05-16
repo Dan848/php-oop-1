@@ -20,10 +20,10 @@ class Genre
     }
     public function getAdultsOnly() {
         if ($this->adults_only) {
-            return "<div>Vietato ai minori</div>";
+            return "<div class='small'>Vietato ai minori</div>";
         }
         else {
-            return "<div>Per tutta la famiglia</div>";
+            return "<div class='small'>Per tutta la famiglia</div>";
         }
     }
 }
