@@ -27,4 +27,14 @@ class Movie
     public function getCoverImage() {
         return "<img class='img-fluid' src='$this->cover_image' alt='$this->title'>";
     }
+
+    public function getRelaseYear() {
+        return "<div> Anno di uscita $this->relase_year</div>";
+    }
+    public function getDirector() {
+        return "<div> Regista $this->director</div>";
+    }
+    public function getRating() {
+        return "<div> Voto $this->rating</div>";
+    }
 }

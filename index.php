@@ -1,5 +1,5 @@
 <?php 
-include __DIR__.'/db.php'
+include __DIR__.'/db.php';
 ?>
 
 <!DOCTYPE html>
@@ -20,12 +20,17 @@ include __DIR__.'/db.php'
         <div class="container mt-5">
             <div class="row justify-content-center">
                 <?php foreach ($movies as $movie) {?>
-                <div class="col-12 col-md-6 col-lg-4">
+                <div class="col-12 col-md-6 col-lg-4 g-3">
                     <div class="card bg-dark border-0">
                         <div>
                             <?php echo $movie->getCoverImage()?>
                         </div>
                         <h3><?php echo $movie->title?></h3>
+                        <div><?php echo $movie->getRelaseYear()?></div>
+                        <div><?php echo $movie->getDirector()?></div>
+                        <div><?php echo $movie->getRating()?></div>
+                        <div><?php echo $movie->genre->getGenres()?></div>
+                        <div><?php echo $movie->genre->getAdultsOnly()?></div>                        
                     </div>
                 </div>
                 <?php }?>

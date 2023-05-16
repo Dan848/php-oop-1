@@ -9,7 +9,7 @@ $movies = [
         2022,
         new Genre(["fantascienza", "azione", "avventura"], false),
         "James Cameron",
-        8
+        7
     ),
     new Movie(
         "2",
@@ -18,7 +18,7 @@ $movies = [
         2019,
         new Genre(["drammatico", "poliziesco", "thriller", "noir"], true),
         "Todd Phillips",
-        9.4
+        9
     ),
     new Movie(
         "3",
@@ -27,7 +27,7 @@ $movies = [
         1979,
         new Genre(["drammatico", "poliziesco", "thriller", "noir"], false),
         "Hayao Miyazaki",
-        8.7
+        8
     ),
     
 ];
